@@ -47,7 +47,7 @@ function deleteAllTodos(req, res){
 function completeToDo(req, res){
     const {id} = req.params;
     if(!todos.has(id)){
-        return res.statys(404).json({message : "to do not found"});
+        return res.status(404).json({message : "to do not found"});
     }
 
     const todo = todos.get(id);
